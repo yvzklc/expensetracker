@@ -3,6 +3,7 @@ import { createBrowserRouter } from 'react-router-dom'
 import {MainLayout} from '../layouts/main/MainLayout'
 import Incomes from '../pages/Incomes'
 import Expenses from '../pages/Expenses'
+import {AddIncome} from '../components/addIncome/AddIncome'
 export const router = createBrowserRouter([{
     path:"/",
     element: <MainLayout/>,
@@ -13,6 +14,10 @@ export const router = createBrowserRouter([{
     {
         path:"/expenses",
         element: <Expenses/>
+    },
+    {
+        path:"/addincome",
+        element: <AddIncome/>
     },]
 }
 ])

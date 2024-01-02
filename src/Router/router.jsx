@@ -4,6 +4,7 @@ import {MainLayout} from '../layouts/main/MainLayout'
 import Incomes from '../pages/Incomes'
 import Expenses from '../pages/Expenses'
 import {AddIncome} from '../components/addIncome/AddIncome'
+import { AddExpense } from '../components/addexpense/AddExpense'
 export const router = createBrowserRouter([{
     path:"/",
     element: <MainLayout/>,
@@ -18,6 +19,10 @@ export const router = createBrowserRouter([{
     {
         path:"/addincome",
         element: <AddIncome/>
+    },
+    {
+        path:"/addexpense",
+        element: <AddExpense/>
     },]
 }
 ])

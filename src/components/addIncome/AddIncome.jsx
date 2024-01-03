@@ -10,7 +10,7 @@ export const AddIncome = () => {
    console.log("date",date)
    const navigate = useNavigate()
    const id = crypto.randomUUID();
-   const amount = income.slice(-1).toString(); 
+   const amount = Number(income.slice(-1).toString()); 
   async function addincome (data){
    
       const incomes = JSON.parse(localStorage.getItem("incomes")) || [];

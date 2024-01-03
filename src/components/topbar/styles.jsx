@@ -1,13 +1,31 @@
+// styles.jsx
 import styled from "styled-components";
+import { FaCircleUser } from 'react-icons/fa6';
 
 export const Topbar = styled.div`
--webkit-box-shadow: 26px 15px 0px 0px rgba(0,0,0,0.54);
-  -moz-box-shadow: 26px 15px 0px 0px rgba(0,0,0,0.54);
-  box-shadow: 26px 15px 0px 0px rgba(0,0,0,1); 
   grid-area: topbar;
   background-color: #fff;
   display: flex;
   justify-content: flex-end;
-  
+  padding: 10px;
 
+`;
+
+export const UserRectangle = styled.div`
+  padding: 15px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid gray;
+  border-radius: 4px;
+`;
+
+export const Username = styled.div`
+  margin-right: 10px;
+`;
+
+export const ProfileIcon = styled(FaCircleUser)`
+  color: #3498db;
+  font-size: 24px;
+  cursor: pointer;
 `;

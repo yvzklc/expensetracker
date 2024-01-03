@@ -10,7 +10,9 @@ export const AddExpense = () => {
    console.log("date",date)
    const navigate = useNavigate()
    const id = crypto.randomUUID();
-   const amount = expense.slice(-1).toString(); 
+   const amount = Number(expense.slice(-1).toString()); 
+   
+
    async function addExpense(data){
    
      const expenses = JSON.parse(localStorage.getItem("expenses")) || [];

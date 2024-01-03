@@ -2,7 +2,8 @@
   margin: 2rem 0 0 2rem;
 }
 .incomeDiv {
-  width: 50rem;
+  width: 100%; /* Set width to 100% for responsiveness */
+  max-width: 50rem; /* Set a maximum width to prevent it from becoming too wide */
   height: 7em;
   margin: 2rem 0 0 0;
   position: relative;
@@ -39,4 +40,13 @@
   text-align: center;
 }
 
+@media only screen and (max-width: 768px) {
+  .Main {
+    margin: 1rem;
+  }
+
+  .incomeDiv {
+    max-width: 100%;
+  }
+}
 

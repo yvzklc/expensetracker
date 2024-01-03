@@ -118,4 +118,80 @@
   transform: scale(0.8);
  }
 
- 
+ @media only screen and (max-width: 768px) {
+  .Main {
+    margin: 1rem;
+  }
+  .noselect {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: red;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+    background: #e62222;
+   }
+   .noselect, .noselect span {
+    transition: 0;
+   }
+   
+   .noselect .text {
+    transform: translateX(35px);
+    color: white;
+    font-weight: bold;
+   }
+   
+   .noselect .icon {
+    position: absolute;
+    transform: translateX(0px);
+    border: none;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+   
+   .noselect svg {
+    width: 10px;
+    fill: #eee;
+   }
+   
+   .noselect:hover {
+    background: #ff3636;
+   }
+   
+   .noselect:hover .text {
+    color: transparent;
+   }
+   
+   .noselect:hover .icon {
+    width: 40px;
+    border-left: none;
+    transform: translateX(0);
+   }
+
+   
+  
+  .noselect.icon svg {
+    transform: scale(0.8);
+   }
+}
+/* Default styling for larger screens */
+.delete .text {
+  display: inline-block;
+}
+
+/* Hide text and show icon on smaller screens */
+@media screen and (max-width: 768px) {
+  .delete .text {
+    display: none;
+  }
+
+  .delete .icon {
+    display: inline-block;
+  }
+}

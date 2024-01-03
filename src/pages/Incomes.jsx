@@ -29,7 +29,7 @@ const Incomes = () => {
     window.location.reload();
   };
   const navigateAdd = () => {
-    navigate("/addincome")
+    navigate("/dashboard/addincome")
   }
   const sum = () => {
     if(dataList.length !== 0){
@@ -72,9 +72,12 @@ const Incomes = () => {
                   </p>
                 </div>
 
-                <button className="noselect delete"  onClick={() => deleteTask(data.id)}>
-                  <span class="text">Delete</span>
-                  <span class="icon">
+                <button
+                  className="noselect delete"
+                  onClick={() => deleteTask(data.id)}
+                >
+                  <span className="text">Delete</span>
+                  <span className="icon">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"

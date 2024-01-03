@@ -8,6 +8,9 @@ export const Topbar = styled.div`
   display: flex;
   justify-content: flex-end;
   padding: 10px;
+  @media (max-width: 768px) {
+    justify-content: center; // ya da istediğiniz başka bir davranış
+  }
 
 `;
 

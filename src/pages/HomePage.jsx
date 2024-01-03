@@ -36,13 +36,13 @@ const HomePage = () => {
         <h2>INCOMES</h2>
         <p>{income}$</p>
         <AiOutlineDollarCircle className='dollarIcon'/>
-        <a href="/incomes">view all</a>
+        <a href="/dashboard/incomes">view all</a>
       </div>
       <div className="expenses">
         <h2>EXPENSES</h2>
         <p>{expense }$</p>
         <AiOutlineDollarCircle className='dollarIcon'/>
-        <a href="/expenses">view all</a>
+        <a href="/dashboard/expenses">view all</a>
       </div>
       </div>
       <div className="chartCard">
@@ -52,7 +52,7 @@ const HomePage = () => {
           labels: ["income" , "expense"],
           datasets: [
             {
-              label: ["count","sdad"],
+              label: ["data"],
               data: [income , expense],
               backgroundColor: [
                 "rgba(250, 192, 19, 0.8)",

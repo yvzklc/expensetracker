@@ -18,7 +18,7 @@ export const AddExpense = () => {
      const expenses = JSON.parse(localStorage.getItem("expenses")) || [];
      expenses.push(data);
      localStorage.setItem("expenses", JSON.stringify(expenses));
-     navigate("/expenses")
+     navigate("/dashboard/expenses")
 
 } 
 

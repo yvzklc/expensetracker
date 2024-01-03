@@ -1,0 +1,85 @@
+/* Add this CSS in your styles.css or within a style tag in your component */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .loginDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  .loginContainer {
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    width: 90%;
+    max-width: 475px;
+  }
+  
+  .loginContainer h1 {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  .loginContainer h3 {
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #000;
+  }
+  
+  .loginContainer p {
+    font-size: 14px;
+    color: #888;
+    margin-top: 5px;
+  }
+  
+  .login-input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .loginButton {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .loginButton:hover {
+    opacity: 0.9;
+  }
+  
+  .forgotPassword {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 14px;
+    color: #888;
+    margin-top: 10px;
+  }
+  
+  .forgotPassword a {
+    color: #2c3e50;
+    text-decoration: underline;
+    margin-left: 5px;
+  }
+  

@@ -1,31 +1,46 @@
-// sidebar.jsx
+// Sidebar.jsx
 import React from "react";
 import * as S from "./styles";
-import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../context/AuthProvider";
+const Sidebar = ({ isSidebarOpen, toggleSidebar,setSidebarOpen }) => {
+  const { logout } = useContext(AuthContext);
 
-const Sidebar = () => {
+
+  const closeSidebar = () => {
+    setSidebarOpen(false);
+  };
+
   return (
-    <S.SidebarContainer>
-      <S.SidebarHeader>
-        <a href="/">Home</a>
-      </S.SidebarHeader>
-      <S.SidebarNav>
-        <S.SidebarLink to="/incomes"  >
-          <i className="zmdi zmdi-view-dashboard"></i>Incomes
-        </S.SidebarLink>
-        <S.SidebarLink to="/expenses"  >
-          <i className="zmdi zmdi-link"></i>Expenses
-        </S.SidebarLink>
-        <S.SidebarLink to="/addincome"  >
-          <i className="zmdi zmdi-view-dashboard"></i> Add Income
-        </S.SidebarLink>
-        <S.SidebarLink to="/addexpense"  >
-          <i className="zmdi zmdi-link"></i> Add Expense
-        </S.SidebarLink>
-     
-   
-      </S.SidebarNav>
-    </S.SidebarContainer>
+    <>
+      <S.SidebarToggleBtn onClick={toggleSidebar}>
+        {isSidebarOpen ? "Close" : "Open"}
+      </S.SidebarToggleBtn>
+
+      {/* Sidebar Container */}
+      <S.SidebarContainer open={isSidebarOpen}>
+        <S.SidebarHeader>
+          <a href="/dashboard">Home</a>
+        </S.SidebarHeader>
+        <S.SidebarNav>
+          <S.SidebarLink to="incomes" onClick={closeSidebar}>
+            <i className="icon"></i>Incomes
+          </S.SidebarLink>
+          <S.SidebarLink to="expenses" onClick={closeSidebar}>
+            <i className="icon"></i>Expenses
+          </S.SidebarLink>
+          <S.SidebarLink to="addincome" onClick={closeSidebar}>
+            <i className="icon"></i> Add Income
+          </S.SidebarLink>
+          <S.SidebarLink to="addexpense" onClick={closeSidebar}>
+            <i className="icon"></i> Add Expense
+          </S.SidebarLink>
+          <S.SidebarLink to="/" onClick={() => { closeSidebar(); logout(); }}>
+            <i className="icon"></i> logout
+          </S.SidebarLink>
+        </S.SidebarNav>
+      </S.SidebarContainer>
+    </>
   );
 };
 

@@ -5,10 +5,16 @@ import Incomes from '../pages/Incomes'
 import Expenses from '../pages/Expenses'
 import {AddIncome} from '../components/addIncome/AddIncome'
 import { AddExpense } from '../components/addexpense/AddExpense'
+import HomePage from '../pages/HomePage'
 export const router = createBrowserRouter([{
     path:"/",
     element: <MainLayout/>,
-    children:[{
+    children:[
+        {
+            index: true,
+            element: <HomePage />,
+          },
+        {
         path:"/incomes",
         element: <Incomes/>
     },

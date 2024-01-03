@@ -29,7 +29,7 @@ export const AddExpense = () => {
         <input
           type="number"
          
-          onInput={(e) => setExpense([...expense, e.target.value])}
+          onInput={(e) => setExpense([...expense,-e.target.value])}
           placeholder="enter expense"
         />
         <input type="text" placeholder="title"

@@ -31,13 +31,24 @@ const Expenses = () => {
   const navigateAdd = () => {
     navigate("/addexpense")
   }
+  const sum = () => {
+    if(dataList.length !== 0){
+      let total = dataList.reduce((acc,inc) =>  acc + inc.amount ,0 )
+      localStorage.setItem("totalExpense",total)
+    }else{
+      console.log("boş",dataList.length)
+      console.log(dataList)
+    }
+  }
+  sum()
   return (
-    <div>
+    <div className='Main'>
   <button type="button" className="addbutton" onClick={() => navigateAdd()} >
   
   <span className="addbutton__text">Add Expense</span>
   <span className="addbutton__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
 </button>
+<br />
       {dataList.length > 0 ? (
         <div>
           <h2>Expenses</h2>

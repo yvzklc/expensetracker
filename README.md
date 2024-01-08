@@ -28,5 +28,5 @@ This React-based Expense Tracker application is developed for managing personal 
 ![](./photos/desktop.gif)
 ![](./photos/desktop.png)
 ![](./photos/mobile.png)
-![](./photos/mobileGraphic.gif)
+![](./photos/mobileGraphic.png)
 

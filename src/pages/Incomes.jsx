@@ -32,13 +32,10 @@ const Incomes = () => {
     navigate("/dashboard/addincome")
   }
   const sum = () => {
-    if(dataList.length !== 0){
+   
       let total = dataList.reduce((acc,inc) =>  acc + inc.amount ,0 )
       localStorage.setItem("totalIncome",total)
-    }else{
-      console.log("boş",dataList.length)
-      console.log(dataList)
-    }
+   
   }
   sum()
   return (

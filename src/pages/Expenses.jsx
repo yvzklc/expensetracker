@@ -17,25 +17,24 @@ const Expenses = () => {
       const dataArray = Object.values(parsedData);
 
       setDataList(dataArray);
+     
     }
   }, []);
   const deleteTask = (id) => {
     const expenses = JSON.parse(localStorage.getItem("expenses"));
     const newExpenses = expenses.filter((expense) => expense.id !== id);
     localStorage.setItem("expenses", JSON.stringify(newExpenses));
+  
     window.location.reload();
   };
   const navigateAdd = () => {
     navigate("/dashboard/addexpense");
   };
   const sum = () => {
-    if (dataList.length !== 0) {
+
       let total = dataList.reduce((acc, inc) => acc + inc.amount, 0);
       localStorage.setItem("totalExpense", total);
-    } else {
-      console.log("boş", dataList.length);
-      console.log(dataList);
-    }
+
   };
   sum();
   return (
